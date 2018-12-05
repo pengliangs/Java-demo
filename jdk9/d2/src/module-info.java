@@ -4,4 +4,5 @@
 module d2 {
     requires d1;
     requires java.logging;
+    requires junit;
 }
