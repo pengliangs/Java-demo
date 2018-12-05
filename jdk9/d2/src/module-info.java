@@ -5,4 +5,5 @@ module d2 {
     requires d1;
     requires java.logging;
     requires junit;
+    requires jdk.incubator.httpclient;
 }

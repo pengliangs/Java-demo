@@ -10,4 +10,16 @@
 
 5.多版本兼容 jar 包
 
+6.只读集合
+
+7.Stream API 增强
+
+新增四方法
+
+* 1.takeWhile
+* 2.dropWhile
+* 3.ofNullable
+* 4.iterate重载
+
+8.javadoc 支持 HTML5
 
