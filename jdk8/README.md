@@ -99,16 +99,67 @@ Comparator<Integer> comparator = (o1, o2) -> Integer.compare(o1, o2);
 * Consume<T>  消费型接口
 
 ```java
+  @Test
+    public void consumeTests() {
+        accept(100, (m) -> System.out.println("消费：" + m));
+    }
 
+    private void accept(int money, Consumer<Integer> consumer) {
+        consumer.accept(money);
+    }
 ```
 
 * Supplier<T> 供给型接口
 
+```java
+   @Test
+    public void supplierTests() {
+        List<Integer> random = getRandom(10, () -> (int) (Math.random() * 1000));
+        random.forEach(System.out::println);
+    }
+
+    private List<Integer> getRandom(int num, Supplier<Integer> supplier) {
+        List<Integer> randoms = new ArrayList<>();
+        for (int i = 0; i < num; i++) {
+            int randomNumber = supplier.get();
+            randoms.add(randomNumber);
+        }
+        return randoms;
+    }
+```
 * Function<T> 函数型接口
 
+```java
+   @Test
+    public void functionTests() {
+        int length = handlerStr("function", (s) -> s == null ? 0 : s.length());
+        Assert.assertEquals(length, 8);
+
+    }
+
+    private Integer handlerStr(String str, Function<String, Integer> function) {
+        return function.apply(str);
+    }
+```
 * Predicate<T> 断言行接口
 
+```java
+    @Test
+    public void predicateTests() {
+        List<String> list = Arrays.asList("4","1","2","a");
+      filterStr(list,(s)-> "a".equals(s)).forEach(System.out::println);
+    }
 
+    private List<String> filterStr(List<String> strs, Predicate<String> predicate) {
+        List<String> list = new ArrayList<>();
+        for (String str : strs) {
+            if (predicate.test(str)) {
+                list.add(str);
+            }
+        }
+        return list;
+    }
+```
 
  
 
