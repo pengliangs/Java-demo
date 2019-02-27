@@ -1,12 +1,12 @@
 > # JDK1.8特性
 
-[Lambdab表达式](#lambdab表达式)
+1. [Lambdab表达式](#lambdab表达式)
 
-    [初始Lambda](#初始lambda)
+    1.1 [初始Lambda](#初始lambda)
     
-    [Lambda表达式基础语法](#lambda表达式基础语法)
+    1.2 [Lambda表达式基础语法](#lambda表达式基础语法)
     
-[内置四大函数式接口](#内置四大函数式接口)
+2. [内置四大函数式接口](#内置四大函数式接口)
 
 
 
