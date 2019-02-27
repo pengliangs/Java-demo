@@ -9,14 +9,11 @@
 2. [内置四大函数式接口](#内置四大函数式接口)
 
 
-
-
-
-### Lambdab表达式
+# Lambdab表达式
 
 > Lambda是一个 **匿名的函数** ，我们可以把Lambda表达式理解为是**一段可以传递的代码**（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到提升
 
-#### 初始Lambda
+## 初始Lambda
 
 原来的匿名内部类,下面使用jdk提供的Comparator接口对TreeSet中的元素进行排序 这样看起来似乎没有什么问题，但是仔细观察发现实际有用的
 只有  return Integer.compare(o1,o2);这一句，写了一推的代码发现只有这么一句有用的
@@ -47,7 +44,7 @@ JDK1.8的Lambada表达式
 
 使用Lambda表达式使代码变得更加简洁，值得注意的是在JDK1.8以前如果在匿名内部类中使用局部变量必须申明为final，JDK1.8后可以省略显示申明final,如果在匿名内部类中使用到局部变量则会默认隐试添加final
 
-#### Lambda表达式基础语法
+## Lambda表达式基础语法
 
 java8中引入了一个新的操作符“->” 该操作符称为箭头操作符或Lambda操作符；箭头操作符将Lambda表达式拆分为两部分：
  
@@ -106,7 +103,7 @@ public interface Query<T> {
 Comparator<Integer> comparator = (o1, o2) -> Integer.compare(o1, o2);
 ```
 
-### 内置四大函数式接口
+# 内置四大函数式接口
 
 * Consume<T>  消费型接口
 
@@ -176,12 +173,12 @@ Comparator<Integer> comparator = (o1, o2) -> Integer.compare(o1, o2);
  
 
 
-* ### 方法引用与构造器引用
+# 方法引用与构造器引用
 
-* ### stream API
+# stream API
 
-* ### 接口默认方法与静态方法
+# 接口默认方法与静态方法
 
-* ### 新时间日期API
+# 新时间日期API
 
-* ### 其他新特性
+# 其他新特性
