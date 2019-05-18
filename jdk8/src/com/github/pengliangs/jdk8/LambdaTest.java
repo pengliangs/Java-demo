@@ -7,9 +7,10 @@ import java.util.TreeSet;
 
 /**
  * lambda表达式
+ *
  * @author pengliang  2019-01-14 22:24
  */
-public class LambdaTests {
+public class LambdaTest {
 
     /**
      * 匿名内部类

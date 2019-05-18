@@ -1,24 +1,19 @@
 package com.github.pengliangs.jdk8;
 
-import com.sun.org.apache.regexp.internal.RE;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.internal.runners.statements.Fail;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 /**
  * 函数式接口
  *
  * @author pengliang  2019-01-14 22:31
  */
-public class FunctionTests {
+public class FunctionTest {
 
     @Test
     public void consumeTests() {
