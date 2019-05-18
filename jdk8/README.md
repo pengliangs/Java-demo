@@ -20,7 +20,7 @@
     
     3.2 [构造器引用](#构造器引用)
    
-4. [stream-api](#stream-api)   
+4. [Stream-api](#stream-api)   
  
     4.1 [什么是 Stream](#什么是-stream)
     
@@ -40,7 +40,7 @@
     
 > # Lambdab表达式
 
-> Lambda是一个 **匿名的函数** ，我们可以把Lambda表达式理解为是**一段可以传递的代码**（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到提升
+Lambda是一个 **匿名的函数** ，我们可以把Lambda表达式理解为是**一段可以传递的代码**（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到提升
 
 ## 初始Lambda
 
@@ -254,7 +254,7 @@ Comparator<Integer> comparator2 = Integer::compare;
 
 ## 构造器引用
 
-**格式： ** `ClassName::new`
+**格式：** `ClassName::new`
 
 与函数式接口相结合，自动与函数式接口中方法兼容。 可以把构造器引用赋值给定义的方法，与构造器参数 列表要与接口中抽象方法的参数列表一致！
 
@@ -263,7 +263,7 @@ Comparator<Integer> comparator2 = Integer::compare;
    Function<Integer, MyClass> fun = MyClass::new;
 ```
 
-> # stream API
+> # Stream API
 
 Java8中有两大最为重要的改变。第一个是 Lambda 表达式；另外一 个则是 `Stream API(java.util.stream.*)`。
 
@@ -397,7 +397,7 @@ UnaryOperator<T> f) `
 
 > # 其他新特性
 
-> ## Optional 类
+## Optional 类
 
 `Optional<T>` 类(java.util.Optional) 是一个容器类，代表一个值存在或不存在，
 原来用 null 表示一个值不存在，现在 Optional 可以更好的表达这个概念。并且
