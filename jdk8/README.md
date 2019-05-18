@@ -38,7 +38,7 @@
     
     4.4 [Stream 的中间操作](#stream-的中间操作)
     
-# Lambdab表达式
+> # Lambdab表达式
 
 > Lambda是一个 **匿名的函数** ，我们可以把Lambda表达式理解为是**一段可以传递的代码**（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到提升
 
@@ -125,7 +125,6 @@ java8中引入了一个新的操作符“->” 该操作符称为箭头操作符
 Comparator<Integer> comparator = (o1, o2) -> Integer.compare(o1, o2);
 ```
 
-<<<<<<< HEAD
 > # 函数式接口
 
 ## 什么是函数式接口
@@ -153,9 +152,7 @@ public interface Query<T> {
 `@FunctionalInterface` 注解是JDK1.8中提供的函数式接口标记，用来约束一个接口中只能申明一个方法
 
 ## 内置四大核心函数式接口
-=======
-# 内置四大函数式接口
->>>>>>> 142e0f6abdcb72e3aa34c023812604e199f4d63f
+
 
 * Consume<T>  消费型接口
 
@@ -222,10 +219,6 @@ private List<String> filterStr(List<String> strs, Predicate<String> predicate) {
 }
 ```
 
- 
-
-
-<<<<<<< HEAD
 > # 方法引用与构造器引用
 
 ## 方法引用
