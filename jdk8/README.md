@@ -440,7 +440,7 @@ LocalDate.now();
 LocalDate.now().plusDays(1); 
 ```
 
-> # 其他新特性
+> # 其他
 
 * String类型底层修改
   
