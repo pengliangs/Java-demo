@@ -1,4 +1,4 @@
-> # JDK1.8特性
+> # JDK1.8特性（主要新特性）
 
 1. [Lambdab表达式](#lambdab表达式)
 
@@ -38,6 +38,8 @@
     
     4.4 [Stream 的中间操作](#stream-的中间操作)
     
+5. [其他](#其他)
+
 > # Lambdab表达式
 
 Lambda是一个 **匿名的函数** ，我们可以把Lambda表达式理解为是**一段可以传递的代码**（将代码像数据一样进行传递）。可以写出更简洁、更灵活的代码。作为一种更紧凑的代码风格，使Java的语言表达能力得到提升
@@ -390,13 +392,6 @@ UnaryOperator<T> f) `
 
 终端操作会从流的流水线生成结果。其结果可以是任何不是流的 值，例如：List、Integer，甚至是 void 。
 
-
-> # 接口默认方法与静态方法
-
-> # 新时间日期API
-
-> # 其他新特性
-
 ## Optional 类
 
 `Optional<T>` 类(java.util.Optional) 是一个容器类，代表一个值存在或不存在，
@@ -417,15 +412,41 @@ UnaryOperator<T> f) `
 |map(Function f)| 如果有值对其处理，并返回处理后的Optional，否则返回 Optional.empty()|
 |flatMap(Function mapper)|与 map 类似，要求返回值必须是Optional|
 
+> # 接口默认方法与静态方法
 
-=======
-# 方法引用与构造器引用
+```java
+// 静态方法
+static void staticMethod() {
+}
 
-# stream API
+// 默认方法，可以充当适配器提供默认实现
+default void defaultMethod(){
+        
+}
+```
 
-# 接口默认方法与静态方法
+> # 新时间日期API
 
-# 新时间日期API
+```java
+// LocalDateTime
+LocalDateTime.now(); // 获取当前时间
+LocalDateTime.now().plusDays(1); // 在当前时间基础上加一天
+LocalDateTime.now().minusDays(1); // 在当前时间基础上减一天
+LocalDateTime.now().plusMonths(1); // 在当前时间基础上减一小时
+// .....
 
-# 其他新特性
->>>>>>> 142e0f6abdcb72e3aa34c023812604e199f4d63f
+// LocalDate
+LocalDate.now(); 
+LocalDate.now().plusDays(1); 
+```
+
+> # 其他新特性
+
+* String类型底层修改
+  
+  将原本的char[]数组替换为byte[],更节约空间
+  
+* Map底层变更
+
+  有底层数组+链表 变成 数组+链表+红黑树 解决链表深度问题
+  
