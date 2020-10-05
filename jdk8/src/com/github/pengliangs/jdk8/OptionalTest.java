@@ -4,13 +4,18 @@ import jdk.nashorn.internal.runtime.options.Option;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Optional;
 
 /**
  * @author pengliang  2019-05-18 11:30
  */
 public class OptionalTest {
-
+    @Test
+    public void mapTest() {
+        Optional<Person> person = Optional.ofNullable(new Person("张三", 18));
+        System.out.println(person.map(p -> p.getName()).get());
+    }
 
     /**
      * 若 t 不为 null,创建 Optional 实例,否则创建空实例
@@ -18,8 +23,8 @@ public class OptionalTest {
      * value == null ? empty() : of(value);
      */
     @Test
-    public void ofNullable() {
-        Optional<Person> person = Optional.ofNullable(new Person());
+    public void ofNullableTest() {
+        Optional<Person> person = Optional.ofNullable(new Person("张三", 18));
         System.out.println(person.get());
         Optional<Person> person2 = Optional.ofNullable(null);
         System.out.println(person2.get());
@@ -48,14 +53,14 @@ public class OptionalTest {
 }
 
 class Person {
-    private String age;
     private String name;
+    private int age;
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -67,11 +72,19 @@ class Person {
         this.name = name;
     }
 
+    public Person() {
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Person{" +
-                "age='" + age + '\'' +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
